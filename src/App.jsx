@@ -1,50 +1,166 @@
 import React from "react";
+import { useState } from "react";
 // import Card from './Components/Cards'
 import './index.css';
 // import Sdata from './Components/Sdata';
 
-const SlotM = (props) => {
-  // let x = props.x;
-  // let y =props.y;
-  // let z = props.z; with the help of object destructring we can short it
-
-  let {x,y,z} = props;
-
-  if (x === y && y === z) {
-    return (
-      <div className="slot_inner">
-        <h1> {x} {y} {z}</h1>
-        <h1>This is matching</h1>
-        <hr />
-      </div>
-    )
-  } else {
-    return (
-      <div className="slot_inner">
-        <h1> {x} {y} {z}</h1>
-        <h1>This is not matching</h1>
-        <hr />
-      </div>
-    )
-  }
-}
+// let currTime = new Date().toLocaleTimeString
 
 const App = () => {
+  let [val, setVal] = useState(0);
+
+  const cVal = ()=>{
+    val++;
+    setVal(val);
+  }
+
   return (
     <React.StrictMode>
-
-      <h1 className="heading_style"> 🎰 Welcome to <span style={{ backgroundColor: 'white' }}>Slot machine game</span> 🎰</h1>
       <div className="container">
 
-        <SlotM x='😄' y='😄' z='😄' />
-        <SlotM x='😄' y='😢' z='🤦‍♂️' />
-        <SlotM x='😄' y='😄' z='😄' />
-        <SlotM x='❤' y='😎' z='🤷‍♂️' />
+        <h1> {currTime} </h1>
+        <button onClick={cVal} className="btn" >Click me</button>
       </div>
 
     </React.StrictMode>
   )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const SlotM = (props) => {
+//   // let x = props.x;
+//   // let y =props.y;
+//   // let z = props.z; with the help of object destructring we can short it
+
+//   let {x,y,z} = props;
+
+//   if (x === y && y === z) {
+//     return (
+//       <div className="slot_inner">
+//         <h1> {x} {y} {z}</h1>
+//         <h1>This is matching</h1>
+//         <hr />
+//       </div>
+//     )
+//   } else {
+//     return (
+//       <div className="slot_inner">
+//         <h1> {x} {y} {z}</h1>
+//         <h1>This is not matching</h1>
+//         <hr />
+//       </div>
+//     )
+//   }
+// }
+
+// const App = () => {
+//   return (
+//     <React.StrictMode>
+
+//       <h1 className="heading_style"> 🎰 Welcome to <span style={{ backgroundColor: 'white' }}>Slot machine game</span> 🎰</h1>
+//       <div className="container">
+
+//         <SlotM x='😄' y='😄' z='😄' />
+//         <SlotM x='😄' y='😢' z='🤦‍♂️' />
+//         <SlotM x='😄' y='😄' z='😄' />
+//         <SlotM x='❤' y='😎' z='🤷‍♂️' />
+//       </div>
+
+// </React.StrictMode>
+//   )
+// }
 
 
 
