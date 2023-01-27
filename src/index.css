@@ -64,3 +64,11 @@ button{
     color: white;
     border: none;
 }
+
+.container{
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    border: 1px solid black;
+    height: 22vw;
+}
