@@ -4,22 +4,24 @@ import { useState } from "react";
 import './index.css';
 // import Sdata from './Components/Sdata';
 
-// let currTime = new Date().toLocaleTimeString
 
+let currTime = new Date().toLocaleTimeString()
 const App = () => {
-  let [val, setVal] = useState(0);
+  let [time, setTime] = useState(currTime);
 
-  const cVal = ()=>{
-    val++;
-    setVal(val);
+  const updateTime = ()=>{
+    currTime = new Date().toLocaleTimeString();
+    setTime(currTime)
   }
+
+  setInterval(updateTime,1000);
 
   return (
     <React.StrictMode>
       <div className="container">
 
-        <h1> {currTime} </h1>
-        <button onClick={cVal} className="btn" >Click me</button>
+        <h1> {time} </h1>
+        <button onClick={updateTime} className="btn" >Click me</button>
       </div>
 
     </React.StrictMode>
